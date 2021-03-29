@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING(100),
         allowNull: false
       },
-      desctiption: {
+      description: {
         type: Sequelize.TEXT,
         allowNull: false
       },
@@ -36,17 +36,19 @@ module.exports = {
         type: Sequelize.STRING(50),
         allowNull: false
       },
-      bookingImgUrl: {
-        type: Sequelize.STRING(250),
-        allowNull: false
-      },
+      // bookingImgUrl: {
+      //   type: Sequelize.STRING(250),
+      //   allowNull: false
+      // },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       }
     });
   },

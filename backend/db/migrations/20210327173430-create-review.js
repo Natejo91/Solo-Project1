@@ -30,17 +30,19 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      reviewImgUrl: {
-        type: Sequelize.STRING(250),
-        allowNull: false
-      },
+      // reviewImgUrl: {
+      //   type: Sequelize.STRING(250),
+      //   allowNull: false
+      // },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
       }
     });
   },

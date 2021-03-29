@@ -29,10 +29,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    bookingImgUrl: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
+    // bookingImgUrl: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false
+    // }
   }, {});
   Venue.associate = function(models) {
     // associations can be defined here

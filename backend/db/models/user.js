@@ -64,7 +64,11 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         len: [1, 50]
       }
-    }
+    },
+    // profileImgUrl: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false
+    // }
   },
   {
     defaultScope: {

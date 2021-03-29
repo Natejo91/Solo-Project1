@@ -21,10 +21,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    reviewImgUrl: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
+    // reviewImgUrl: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false
+    // }
   }, {});
   Review.associate = function(models) {
     // associations can be defined here

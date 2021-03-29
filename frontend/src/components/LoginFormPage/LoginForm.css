@@ -11,7 +11,7 @@
     padding: 115px;
     width: 50%;
     list-style-type: none;
-    z-index: 150;
+    z-index: 90;
 }
 
 .loginContainer {

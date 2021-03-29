@@ -1,9 +1,12 @@
 /* TODO Add site wide styles */
 
-html, body {
-    background-color: black;
+* {
     padding: 0;
     margin: 0;
+}
+
+body {
+    background-color: black;
 }
 
 #stageImg {

@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('', asyncHandler(async (req, res) => {
     const venues = await db.Venue.findAll();
-    return res.json(venues);
+    return await res.json(venues);
 }));
 
 

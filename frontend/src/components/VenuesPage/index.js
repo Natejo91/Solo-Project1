@@ -1,30 +1,28 @@
-import * as venueActions from '../../store/venue';
+import { getVenues } from '../../store/venue';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-
-
-
+import './Venues.css';
 
 function VenuesPage() {
     const dispatch = useDispatch();
+
     useEffect(() => {
-        dispatch(venueActions.getVenues())
-    }, [dispatch])
+        dispatch(getVenues())
+    }, [dispatch]);
 
     const venues = useSelector(state => {
-       return state.list
+       return state.venue.list
     });
 
-    if (!venues) {
-        return null;
-    }
-
     return (
-        <div className='venueContainer'>
-            <h2>Hello</h2>
+        <div id='venueContainer'>
+            <h1>Venues</h1>
             <ul>
-                {venues.map(venue => (
-                    <li key={venue.id}>{venue}</li>
+                {venues?.map(venue => (
+                        <li key={venue.id}>
+                            {venue.title}
+                        </li>
+
                 ))}
             </ul>
         </div>

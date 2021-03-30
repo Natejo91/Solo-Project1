@@ -1,5 +1,6 @@
-.venueContainer {
-    margin-top: 40px;
-    background-color: red;
+#venueContainer {
+    margin-top: 5%;
+    background-color: white;
     height: 300px;
+    width: 100%;
 }

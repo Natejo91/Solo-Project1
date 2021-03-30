@@ -32,7 +32,7 @@ const venueReducer = (state = initialState, action) => {
             return {
                 ...allVenues,
                 ...state,
-                //could possibly do a sort here
+                list: action.list
             }
         }
         default:

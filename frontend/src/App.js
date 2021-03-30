@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <Navigation isLoaded={isLoaded} className='navBar' />
+      <Navigation isLoaded={isLoaded} />
         {isLoaded && (
           <Switch>
             <Route path='/login'>
@@ -30,7 +30,7 @@ function App() {
           </Switch>
       )}
       <img src={stage} alt='Concert stage' id='stageImg'/>
-      <VenuesPage className='venuesComponent'/>
+      <VenuesPage />
     </>
   );
 }

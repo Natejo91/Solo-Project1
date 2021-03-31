@@ -19,9 +19,9 @@ export const getSearch = (param) => async dispatch => {
 
 const searchReducer = (state = [], action) => {
     switch (action.type) {
-        case LOAD: {
-            return { ...state, search: [...action.list]}
-        }
+        case LOAD:
+        const newState = action.list;
+        return newState;
         default:
             return state;
     }

@@ -6,12 +6,12 @@ import './venueId.css';
 
 function VenueIdPage() {
     const { id } = useParams();
-    const [ currentId, setCurrentId ] = useState(id);
-    const dispatch = useDispatch();
-    useEffect(() => {
-        console.log(id, '------------');
-        dispatch(getVenue(id))
-    }, [dispatch, id]);
+    // const [ currentId, setCurrentId ] = useState(id);
+    // const dispatch = useDispatch();
+    // useEffect(() => {
+    //     console.log(id, '------------');
+    //     dispatch(getVenue(id))
+    // }, [dispatch, id]);
 
     const venue = useSelector(state => {
         return state.venue[id];
@@ -20,10 +20,10 @@ function VenueIdPage() {
     return (
         <>
             <h1>HELLOOOOOOOOO</h1>
-            <div id='venue-id'>
-                {console.log(venue, 'venueIdPage')};
+            <div className='venue-id'>
+                {console.log(venue, 'venueIdPage')}
                 <h2>{venue.title}</h2>
-                <ul>
+                <ul className='venueList'>
                     <li>{venue.description}</li>
                     <li>{venue.maxGuests}</li>
                     <li>{venue.dailyCost}</li>

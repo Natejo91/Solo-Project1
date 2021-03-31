@@ -35,7 +35,7 @@ function App() {
             <Route path='/venues/:id' >
               <VenueIdPage />
             </Route>
-            <Route>
+            <Route path='/list'>
               <SearchBar />
             </Route>
           </Switch>

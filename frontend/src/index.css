@@ -10,7 +10,7 @@ body {
 }
 
 #stageImg {
-    position: relative;
+    position: absolute;
     max-width: 85%;
     max-height: 90%;
     top: 90px;

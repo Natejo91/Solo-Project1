@@ -1,6 +1,18 @@
-#venue-id {
-    position: relative;
-    color: white;
-    height: 100px;
+.venue-id {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 30%;
+    left: 32%;
+    width: 35%;
+    height: 35%;
+    background-color: white;
+    color: black;
     z-index: 120;
+}
+
+.venueList {
+    text-align: center;
 }

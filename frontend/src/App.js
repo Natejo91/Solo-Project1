@@ -5,6 +5,7 @@ import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
 import VenuesPage from './components/VenuesPage';
 import ListSearchPage from './components/ListSearchPage';
+import SearchIdPage from './components/SearchIdPage';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import VenueIdPage from './components/VenueIdPage';
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route exact path='/list'>
               <ListSearchPage />
+            </Route>
+            <Route path='/search/:id'>
+              <SearchIdPage />
             </Route>
           </Switch>
       )}

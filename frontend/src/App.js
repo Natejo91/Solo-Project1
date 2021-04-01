@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
 import VenuesPage from './components/VenuesPage';
-import SearchBar from './components/SearchBar';
+import ListSearchPage from './components/ListSearchPage';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import VenueIdPage from './components/VenueIdPage';
@@ -32,11 +32,11 @@ function App() {
             <Route exact path='/venues' >
               <VenuesPage />
             </Route>
-            <Route path='/venues/:id' >
+            <Route exact path='/venues/:id' >
               <VenueIdPage />
             </Route>
-            <Route path='/list'>
-              <SearchBar />
+            <Route exact path='/list'>
+              <ListSearchPage />
             </Route>
           </Switch>
       )}

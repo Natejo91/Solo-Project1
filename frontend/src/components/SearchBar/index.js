@@ -1,6 +1,6 @@
 import * as searchActions from '../../store/search';
-import { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './searchBar.css'
 
@@ -19,7 +19,6 @@ function SearchBar() {
         <div className='search-bar'>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <input
-                    type='search'
                     value={search}
                     name='search'
                     placeholder='Search...'

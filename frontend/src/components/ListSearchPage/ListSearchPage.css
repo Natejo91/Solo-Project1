@@ -1,0 +1,11 @@
+#venue-search-container {
+    position: relative;
+    top: 300px;
+    width: 40%;
+    height: 300px;
+    left: 32%;
+    right: 50%;
+    background-color: white;
+    color: black;
+    z-index: 200;
+}

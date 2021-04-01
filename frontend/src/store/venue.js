@@ -29,7 +29,6 @@ export const getVenues = () => async (dispatch) => {
     const response = await csrfFetch('/api/venues');
     if (response.ok) {
         const list = await response.json();
-        console.log(list, '****************')
         dispatch(load(list));
     }
 };
@@ -45,7 +44,6 @@ const venueReducer = (state = null, action) => {
             //     ...allVenues,
             //     ...state,
             // }
-            console.log(allVenues)
             return allVenues;
         }
         default:

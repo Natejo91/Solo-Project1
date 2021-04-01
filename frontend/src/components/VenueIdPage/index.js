@@ -10,6 +10,11 @@ function VenueIdPage() {
         return state.venue[id];
     })
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+    }
+
     return (
         <>
             <div className='venue-id'>
@@ -24,6 +29,7 @@ function VenueIdPage() {
                     <li>{venue.state}</li>
                 </ul>
             </div>
+            <button onClick={(e) => handleSubmit(e)}></button>
         </>
 
     )

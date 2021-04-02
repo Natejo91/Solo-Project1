@@ -28,17 +28,22 @@ function VenueIdPage() {
         return state.session.user?.id
     })
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        dispatch(bookReservation(userId, id, date))
-        history.push('/');
+        if (date) {
+            dispatch(bookReservation(userId, id, date))
+            history.push('/');
+        } else {
+            window.alert('You must enter a date');
+        }
+
     }
 
     let sessionLinks;
     if (sessionUser) {
         sessionLinks = (
             <>
-                <input type='date' name='date' onChange={(e) => setDate(e.target.value)} value={date}></input>
+                <input type='date' name='date' onChange={(e) => setDate(e.target.value) } value={date}></input>
                 <button className='booking-button' onClick={(e) => handleSubmit(e)}>Book Venue</button>
             </>
         );

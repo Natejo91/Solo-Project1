@@ -23,7 +23,7 @@ function ReservationsPage() {
             <ul>
                 <li>Reservation</li>
                 {reservations.map((item, i) => (
-                    <li key={`li-${item.createdAt}`}>
+                    <li key={`li-${i}`}>
                         <NavLink to={`/venues/${item.venueId}`} key={i}>
                             HEY
                             {/* <img src={item.bookingImgUrl} alt='booking'/> */}

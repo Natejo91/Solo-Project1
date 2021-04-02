@@ -11,9 +11,9 @@ function ListSearchPage() {
         return (
             <div id='venue-search-container'>
                 <ul>
-                    {Object.values(venueSearch).map(venue =>(
+                    {Object.values(venueSearch).map((venue, i) =>(
 
-                        <li key={`li-${venue.id}`}>
+                        <li key={`li-${i}`}>
                             {venue.title}
                             <NavLink to={`/venues/${venue.id}`} key={venue.id}>
                                 <img id='venue-image' src={venue.bookingImgUrl} alt='venue'/>

@@ -5,8 +5,19 @@ const { Venue, User } = require('../../db/models');
 const router = express.Router();
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op
+const { check, validationResult} = require('express-validator');
+const { handleValidationErrors } = require('../../utils/validation');
 
-router.post('/', asyncHandler(async (req, res) => {
+const reservationValidations = [
+    check('date')
+        .exists({ checkFalsy: true })
+        .notEmpty()
+        .withMessage('Please pick a date.'),
+    handleValidationErrors
+];
+
+
+router.post('/', reservationValidations, asyncHandler(async (req, res) => {
     const { venueId, reserverId, date } = req.body;
     const reservation = await ReservationDay.create({ reserverId, venueId, concertDate: date })
     // const venue = await Venue.findByPk(reservation.venueId, {include: ReservationDay})

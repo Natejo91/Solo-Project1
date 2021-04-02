@@ -31,7 +31,10 @@ export const bookReservation = (reserverId, venueId, date) => async (dispatch) =
     if (response.ok) {
         const data = await response.json();
         return dispatch(setReservation(data))
+    } else {
+        return alert('You must pick a date');
     }
+
 }
 
 export const getReservation = (userId) => async (dispatch) => {

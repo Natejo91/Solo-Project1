@@ -6,9 +6,9 @@ const Sequelize = require('sequelize');
 const { Review } = require('../../db/models');
 const Op = Sequelize.Op
 
-router.get('/', asyncHandler(async (req, res) => {
-    console.log(req.params);
-    const reviews = await Review.findAll({})
+router.get('/:id', asyncHandler(async (req, res) => {
+    const id  = req.params.id;
+    const reviews = await Review.findAll({where: { venueId: id }})
     console.log(reviews);
     return res.json(reviews);
 }))

@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { bookReservation } from '../../store/reservation';
 import { useParams, useHistory } from 'react-router-dom';
 import { getVenue } from '../../store/venue';
+import { getReviews} from '../../store/review';
+import Reviews from '../Reviews';
 import './venueId.css';
 
 function VenueIdPage() {
@@ -13,6 +15,7 @@ function VenueIdPage() {
     const history = useHistory();
     useEffect(() => {
         dispatch(getVenue(id));
+        dispatch(getReviews(id))
     }, [dispatch, id])
 
     const venue = useSelector(state => {
@@ -23,9 +26,6 @@ function VenueIdPage() {
     const userId = useSelector(state => {
         return state.session.user?.id
     })
-
-    // console.log(userId)
-    // console.log(venueId)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -59,6 +59,7 @@ function VenueIdPage() {
                     <li>{venue.state}</li>
                 </ul>
                 <img className='venue-image' src={venue.bookingImgUrl} alt='Venue'/>
+                <Reviews />
                 {sessionLinks}
             </div>
         </>

@@ -13,8 +13,8 @@ const loadReviews = list => ({
     list
 })
 
-export const getReviews = () => async (dispatch) => {
-    const response = await csrfFetch('/api/reviews');
+export const getReviews = (id) => async (dispatch) => {
+    const response = await csrfFetch(`/api/reviews/${id}`);
     if (response.ok) {
         const data = await response.json();
         dispatch(loadReviews(data));

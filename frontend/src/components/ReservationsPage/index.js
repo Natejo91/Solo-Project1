@@ -19,8 +19,8 @@ function ReservationsPage() {
     return (
         <div className='reservation'>
             <ul>
-                <li>Reservation Component</li>
-                {/* {reservations.map(item => (
+                {/* <li>Reservation</li>
+                {reservations.map(item => (
                     <li key={item.id}>
                         <img src={item.bookingImgUrl} alt='booking'/>
                     </li>

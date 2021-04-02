@@ -17,23 +17,11 @@ router.get('/:id', asyncHandler(async (req, res) => {
     const { id } = req.params;
     let array = [];
     console.log(id);
-    const reservations = await ReservationDay.findAll({ where: { reserverId: id }})
+    const reservations = await ReservationDay.findAll({ where: { reserverId: id }, include: [{model: Venue}]})
     console.log(reservations);
-    if (reservations[0]) {
-        reservations.forEach(reservation => {
-            array.push(reservation.dataValues.venueId)
-        }) //maybe need to come up with some logic here
-
-        const venues = await Venue.findAll({
-            where: {
-                id: {
-                    [Op.in]: array
-                }
-            }
-        })
-        return res.json(venues);
+    return res.json(reservations);
     }
-}))
+))
 
 
 module.exports = router;

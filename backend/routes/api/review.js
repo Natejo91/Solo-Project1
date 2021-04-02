@@ -24,7 +24,7 @@ router.post('/', asyncHandler(async (req, res) => {
         reviewImgUrl
     } = req.body;
 
-    const reservation = await review.create({
+    const review = await Review.create({
         userId,
         venueId,
         title,
@@ -32,11 +32,7 @@ router.post('/', asyncHandler(async (req, res) => {
         rating,
         reviewImgUrl
     })
-    return res.json(reservation);
-}))
-
-router.get('/:id', asyncHandler(async (req, res) => {
-
+    return res.json(review);
 }))
 
 router.patch('/:id', asyncHandler(async (req, res) => {

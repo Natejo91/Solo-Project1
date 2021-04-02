@@ -10,6 +10,7 @@ import * as sessionActions from './store/session';
 import * as venueActions from './store/venue';
 import * as searchActions from './store/search';
 import * as reservationActions from './store/reservation';
+import * as reviewActions from './store/review';
 
 const store = configureStore();
 
@@ -21,6 +22,7 @@ if (process.env.NODE_ENV !== "production") {
   window.venueActions = venueActions;
   window.searchActions = searchActions;
   window.reservationActions = reservationActions;
+  window.reviewActions = reviewActions;
 }
 
 function Root() {

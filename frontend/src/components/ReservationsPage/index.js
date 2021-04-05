@@ -18,7 +18,6 @@ function ReservationsPage() {
     if (!reservationObjects) return null;
 
     const reservations = Object.values(reservationObjects);
-    console.log(reservations);
     return (
         <div className='reservation'>
             <h2>Upcoming Concerts</h2>

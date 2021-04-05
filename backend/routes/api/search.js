@@ -8,9 +8,7 @@ const { Venue } = require('../../db/models');
 const router = express.Router();
 
 router.get('/:location', asyncHandler(async (req, res) => {
-    console.log('-==============');
     const search = req.params.location
-    console.log(search);
 
     const venues = await Venue.findAll({
         where: {

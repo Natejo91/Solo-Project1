@@ -16,7 +16,6 @@ function ReviewCreatePage() {
     const [ rating, setRating ] = useState('');
     const [ validationErrors, setValidationErrors ] = useState([]);
     const userId = useSelector((state) => state.session.user.id);
-    console.log('in reviewcreatepage')
 
     const handleSubmit = (e) => {
         e.preventDefault();

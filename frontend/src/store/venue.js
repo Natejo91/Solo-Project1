@@ -17,7 +17,6 @@ const getOneVenue = (venue) => ({
 
 
 export const getVenue = (id) => async (dispatch) => {
-    // console.log('for getVenue thunk')
     const response = await csrfFetch(`/api/venues/${id}`);
     if (response.ok) {
         const venue = await response.json();

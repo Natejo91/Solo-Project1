@@ -17,7 +17,6 @@ function UserReviews() {
     if (!userReviews) return null;
 
     const reservations = Object.values(userReviews);
-    console.log(reservations);
     return (
         <div className='reviews'>
             <h2>Your Reviews</h2>

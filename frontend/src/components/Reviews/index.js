@@ -13,8 +13,6 @@ function Reviews() { //this is venueId
     const history = useHistory();
     const user = useSelector(state => state.session.user);
 
-    console.log(reviews)
-
 
     // useEffect(() => {
     //     // dispatch(editReview());

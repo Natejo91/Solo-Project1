@@ -40,9 +40,7 @@ export const bookReservation = (reserverId, venueId, date) => async (dispatch) =
 export const getReservation = (userId) => async (dispatch) => {
     const response = await csrfFetch(`/api/reservations/${userId}`);
     if (response.ok) {
-        console.log(response);
-        const data = await response.json();
-        console.log(data);
+        const data = await response.json();;
         return dispatch(getRes(data));
     }
 }
@@ -59,12 +57,10 @@ const reservationReducer = (state = {}, action) => {
             return newState;
         case GET_RESERVATION:
             const array = action.reservations;
-            console.log(array);
             for (let i = 0; i < array.length; i++) {
                 // let key = array[i].id;
                 newState[i + 1] = array[i]
             }
-            console.log(newState);
             return newState;
 
         default:

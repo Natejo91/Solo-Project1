@@ -54,7 +54,6 @@ function VenueIdPage() {
     return (
         <>
             <div className='venue-id'>
-                {console.log(venue, 'venueIdPage')}
                 <h2>{venue.title}</h2>
                 <ul className='venueList'>
                     <li className='li-item'>- {venue.description}</li>

@@ -16,7 +16,6 @@ router.get('/:id', asyncHandler(async (req, res) => {
 router.get("/", asyncHandler(async (req, res) => {
     const id = req.params.id
     const userReviews = await Review.findAll({ where: { userId: id } })
-    console.log(userReviews);
     return res.json(userReviews);
   }))
 

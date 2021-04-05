@@ -21,12 +21,10 @@ const userReviewReducer = (state = {}, action) => {
         case GET_USERREV: {
             let newState = {};
             const array = action.reviews;
-            console.log(array);
             for (let i = 0; i < array.length; i++) {
                 // let key = array[i].id;
                 newState[i + 1] = array[i]
             }
-            console.log(newState);
             return newState;
         }
             default:

@@ -71,7 +71,6 @@ export const deleteReview = (reviewId) => async (dispatch) => {
         method: 'DELETE',
     })
     const data = await response.json();
-    console.log(data);
     dispatch(deleteRev(reviewId))
     //maybe need to return something here
     return null;

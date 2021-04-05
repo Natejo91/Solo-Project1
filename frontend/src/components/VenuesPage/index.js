@@ -11,10 +11,8 @@ function VenuesPage() {
     }, [dispatch]);
 
     const venues = useSelector(state => {
-        // console.log(state.venue, 'inside useSelector')
        return state.venue
     });
-    // console.log(venues, 'after useSelector');
 
     if (!venues) return null;
 

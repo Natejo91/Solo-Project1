@@ -96,5 +96,5 @@
 //   }
 
 //   export default GoogleApiWrapper({
-//     apiKey: ('AIzaSyAOM7jdJZjum0Kqu7Xu_3hf-h4BtXUVGa8')
+//     API KEY HERE
 //   })(MapContainer)

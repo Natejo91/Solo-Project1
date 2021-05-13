@@ -1,7 +1,6 @@
 {
   "name": "solo-project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "heroku-postbuild": "npm run build --prefix frontend",
@@ -22,5 +21,6 @@
   "bugs": {
     "url": "https://github.com/Natejo91/Solo-Project1/issues"
   },
-  "homepage": "https://github.com/Natejo91/Solo-Project1#readme"
+  "homepage": "https://github.com/Natejo91/Solo-Project1#readme",
+  "description": ""
 }
